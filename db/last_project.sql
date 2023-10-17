@@ -1,0 +1,126 @@
+CREATE DATABASE IF NOT EXISTS last_project;
+USE last_project;
+
+
+DROP TABLE IF EXISTS Orders;
+DROP TABLE IF EXISTS Prices;
+DROP TABLE IF EXISTS Products;
+DROP TABLE IF EXISTS Specs;
+DROP TABLE IF EXISTS OSs;
+DROP TABLE IF EXISTS Screens;
+DROP TABLE IF EXISTS RAMs;
+DROP TABLE IF EXISTS Storages;
+DROP TABLE IF EXISTS GPUs;
+DROP TABLE IF EXISTS CPUs;
+DROP TABLE IF EXISTS Categories;
+DROP TABLE IF EXISTS Manufacturers;
+
+
+CREATE TABLE Manufacturers (
+    ID INT AUTO_INCREMENT,
+    Name VARCHAR(15),
+    CONSTRAINT PK_Manufacturers PRIMARY KEY (ID)
+);
+
+CREATE TABLE Categories (
+    ID INT AUTO_INCREMENT,
+    Name VARCHAR(31),
+    CONSTRAINT PK_CPUs PRIMARY KEY (ID)
+);
+
+CREATE TABLE CPUs (
+    ID INT AUTO_INCREMENT,
+    Model VARCHAR(31),
+    Frequency FLOAT,
+    Manufacturer_ID INT,
+    CONSTRAINT PK_CPUs PRIMARY KEY (ID),
+    CONSTRAINT FK_CPUs_Manufacturers FOREIGN KEY (Manufacturer_ID) REFERENCES Manufacturers(ID)
+);
+
+CREATE TABLE GPUs (
+    ID INT AUTO_INCREMENT,
+    Model VARCHAR(31),
+    Manufacturer_ID INT,
+    CONSTRAINT PK_GPUs PRIMARY KEY (ID),
+    CONSTRAINT FK_GPUs_Manufacturers FOREIGN KEY (Manufacturer_ID) REFERENCES Manufacturers(ID)
+);
+
+CREATE TABLE Storages (
+    ID INT AUTO_INCREMENT,
+    Size INT,
+    Type VARCHAR(15),
+    CONSTRAINT PK_Storages PRIMARY KEY (ID)
+);
+
+CREATE TABLE RAMs (
+    ID INT AUTO_INCREMENT,
+    Size INT,
+    CONSTRAINT PK_RAMs PRIMARY KEY (ID)
+);
+
+CREATE TABLE Screens (
+    ID INT AUTO_INCREMENT,
+    Size FLOAT,
+    Resolution VARCHAR(15),
+    Type VARCHAR(63),
+    CONSTRAINT PK_Screens PRIMARY KEY (ID)
+);
+
+CREATE TABLE OSs (
+    ID INT AUTO_INCREMENT,
+    Name VARCHAR(15),
+    Version VARCHAR(7),
+    CONSTRAINT PK_OSs PRIMARY KEY (ID)
+);
+
+CREATE TABLE Specs (
+    ID INT AUTO_INCREMENT,
+    Weight FLOAT,
+    CPU_ID INT,
+    GPU_ID INT,
+    Storage_ID INT,
+    RAM_ID INT,
+    Screen_ID INT,
+    OS_ID INT,
+    CONSTRAINT PK_Specs PRIMARY KEY (ID),
+    CONSTRAINT FK_Specs_CPUs FOREIGN KEY (CPU_ID) REFERENCES CPUs(ID),
+    CONSTRAINT FK_Specs_GPUs FOREIGN KEY (GPU_ID) REFERENCES GPUs(ID),
+    CONSTRAINT FK_Specs_Storages FOREIGN KEY (Storage_ID) REFERENCES Storages(ID),
+    CONSTRAINT FK_Specs_RAMs FOREIGN KEY (RAM_ID) REFERENCES RAMs(ID),
+    CONSTRAINT FK_Specs_Screens FOREIGN KEY (Screen_ID) REFERENCES Screens(ID),
+    CONSTRAINT FK_Specs_OSs FOREIGN KEY (OS_ID) REFERENCES OSs(ID)
+);
+
+CREATE TABLE Products (
+    ID INT AUTO_INCREMENT,
+    Name VARCHAR(31),
+    Manufacturer_ID INT,
+    Spec_ID INT,
+    Category_ID INT,
+    CONSTRAINT PK_Products PRIMARY KEY (ID),
+    CONSTRAINT FK_Products_Manufacturers FOREIGN KEY (Manufacturer_ID) REFERENCES Manufacturers(ID),
+    CONSTRAINT FK_Products_Specs FOREIGN KEY (Spec_ID) REFERENCES Specs(ID),
+    CONSTRAINT FK_Products_Categories FOREIGN KEY (Category_ID) REFERENCES Categories(ID)
+);
+
+CREATE TABLE Prices (
+    ID INT AUTO_INCREMENT,
+    Quantity INT,
+    Price INT,
+    Discount INT,
+    Total_Price DECIMAL,
+    Profit DECIMAL,
+    Product_ID INT,
+    CONSTRAINT PK_Prices PRIMARY KEY (ID),
+    CONSTRAINT FK_Prices_Products FOREIGN KEY (Product_ID) REFERENCES Products(ID)
+);
+
+CREATE TABLE Orders (
+    ID INT,
+    Branch VARCHAR(31),
+    Date DATE,
+    Priority CHAR,
+    Price_ID INT,
+    CONSTRAINT PK_Orders PRIMARY KEY (ID),
+    CONSTRAINT FK_Orders_Prices FOREIGN KEY (Price_ID) REFERENCES Prices(ID)
+);
