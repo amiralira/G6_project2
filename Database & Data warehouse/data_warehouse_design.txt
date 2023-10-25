@@ -1,0 +1,47 @@
+Table ProductFactTable {
+  Product_ID INT
+  Oredr_ID INT
+  Price_ID INT
+  Name VARCHAR
+  Manufacturer VARCHAR
+  Category VARCHAR
+  RAM INT
+  Storage VARCHAR
+  Weight FLOAT
+}
+
+Table ProductDimension {
+  Product_ID INT
+  CPU_Manufacturer VARCHAR
+  CPU_Model VARCHAR
+  CPU_Freq FLOAT
+  GPU_Manufacturer VARCHAR
+  GPU_Model VARCHAR
+  OS_Name VARCHAR
+  OS_Version VARCHAR
+  Screen_Size FLOAT
+  Screen_Resolution VARCHAR
+  Screen_Type VARCHAR
+}
+
+Table OredrsDimension {
+  Oredr_ID INT
+  Oredr_Branch VARCHAR
+  Oredr_Date DATE 
+  Oredr_Priority CHAR
+  Ship_Duration INT
+}
+
+Table PriceDimension {
+  Price_ID INT
+  Quantity INT
+  Price INT
+  Discount INT
+  Total_Price INT
+  Profit INT
+  Dollar_Price INT
+}
+
+Ref: ProductFactTable.Product_ID - ProductDimension.Product_ID
+Ref: ProductFactTable.Oredr_ID < OredrsDimension.Oredr_ID
+Ref: ProductFactTable.Price_ID < PriceDimension.Price_ID

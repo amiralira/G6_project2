@@ -1,0 +1,97 @@
+Table Manufacturers {
+  ID INT [primary key]
+  Name VARCHAR
+}
+
+Table Categories {
+  ID INT [primary key]
+  Name VARCHAR
+}
+
+Table Products {
+  ID INT [primary key]
+  Manufacturer_ID INT [note: 'Foreign Key']
+  Spec_ID INT [note: 'Foreign Key']
+  Category_ID INT [note: 'Foreign Key']
+}
+
+Table Prices {
+  ID INT [primary key]
+  Quantity INT
+  Price INT
+  Discount INT
+  Total_Price INT
+  Profit INT
+  Dollar_Price INT
+  Product_ID INT [note: 'Foreign Key']
+}
+
+Table Orders {
+  ID INT [primary key]
+  Branch VARCHAR
+  Date Date
+  Priority CHAR
+  Ship_Duration INT
+  Price_ID INT [note: 'Foreign Key']
+}
+
+Table Specs {
+  ID INT [primary key]
+  Weight FLOAT
+  CPU_ID INT [note: 'Foreign Key']
+  GPU_ID INT [note: 'Foreign Key']
+  Storage_ID INT [note: 'Foreign Key']
+  RAM_ID INT [note: 'Foreign Key']
+  Screen_ID INT [note: 'Foreign Key']
+  OS_ID INT [note: 'Foreign Key']
+}
+
+Table Screen {
+  ID INT [primary key]
+  Size FLOAT
+  Resolution VARCHAR
+  Type VARCHAR
+}
+
+Table CPU {
+  ID INT [primary key]
+  Model VARCHAR
+  Frequency FLOAT
+  Manufacturer_ID INT [note: 'Foreign Key']
+}
+
+Table RAM {
+  ID INT [primary key]
+  Size INT
+}
+
+Table Storage {
+  ID INT [primary key]
+  Model VARCHAR
+}
+
+Table GPU {
+  ID INT [primary key]
+  Model VARCHAR
+  Manufacturer_ID INT [note: 'Foreign Key']
+}
+
+Table OS {
+  ID INT [primary key]
+  Name VARCHAR
+  Version VARCHAR
+}
+
+Ref: Products.Spec_ID - Specs.ID
+Ref: Products.Manufacturer_ID < Manufacturers.ID
+Ref: Products.Category_ID > Categories.ID
+Ref: Prices.Product_ID > Products.ID
+Ref: Orders.Price_ID < Prices.ID
+Ref: CPU.Manufacturer_ID < Manufacturers.ID
+Ref: GPU.Manufacturer_ID < Manufacturers.ID
+Ref: Specs.CPU_ID - CPU.ID
+Ref: Specs.GPU_ID - GPU.ID
+Ref: Specs.Storage_ID - Storage.ID
+Ref: Specs.RAM_ID - RAM.ID
+Ref: Specs.Screen_ID - Screen.ID
+Ref: Specs.OS_ID - OS.ID
