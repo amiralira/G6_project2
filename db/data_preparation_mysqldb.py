@@ -8,6 +8,7 @@ from jdatetime import datetime
 
 
 file_dir = "sales_data.csv"
+file_dir2 = "dollar_price.csv"
 # Enter the following values to connect to the database
 user = ""
 password = ""
@@ -161,8 +162,9 @@ CREATE TABLE Prices (
     Quantity INT,
     Price INT,
     Discount INT,
-    Total_Price DECIMAL,
-    Profit DECIMAL,
+    Total_Price INT,
+    Profit INT,
+    Dollar_Price INT,
     Product_ID INT,
     CONSTRAINT PK_Prices PRIMARY KEY (ID),
     CONSTRAINT FK_Prices_Products FOREIGN KEY (Product_ID) REFERENCES Products(ID)
@@ -203,6 +205,24 @@ df = pd.read_csv(file_dir, low_memory=False)
 df["Screen_Size"] = df["Screen_Size"].str.replace('"', "").astype(float)
 df["RAM"] = df["RAM"].str.replace("GB", "").astype(int)
 df["Weight"] = df["Weight"].replace(["kgs", "kg"], "", regex=True).astype(float)
+
+# ------------------------------------------------------------------
+# Dollar Price
+df["Order_Date"] = df["Order_Date"].apply(lambda x: datetime.strptime(x, "%Y-%m-%d").togregorian())
+
+df_dollar_price = pd.read_csv(file_dir2, index_col=[0])
+df_dollar_price["miladi"] = pd.to_datetime(df_dollar_price["miladi"])
+
+df = pd.merge(
+    df,
+    df_dollar_price,
+    how="left",
+    left_on="Order_Date",
+    right_on="miladi",
+)
+df.drop(columns=["miladi", "shamsi"], inplace=True)
+df.rename(columns={"close_price": "Dollar_Price"}, inplace=True)
+# ------------------------------------------------------------------
 
 
 def set_index(_df):
@@ -350,6 +370,7 @@ df_products = df.drop(
         "Discount",
         "Total_Price",
         "Profit",
+        "Dollar_Price",
         "Ship_Duration",
     ],
     axis=1,
@@ -404,6 +425,7 @@ df_table_prices = df_table_prices[
         "Discount",
         "Total_Price",
         "Profit",
+        "Dollar_Price",
         "Product_ID",
     ]
 ]
@@ -455,6 +477,7 @@ df_table_orders = merge_df(
         "Discount",
         "Total_Price",
         "Profit",
+        "Dollar_Price",
         "Product_ID2",
     ],
     [
@@ -463,6 +486,7 @@ df_table_orders = merge_df(
         "Discount",
         "Total_Price",
         "Profit",
+        "Dollar_Price",
         "Product_ID",
     ],
     "ID",
@@ -581,7 +605,7 @@ df_table_products.rename(columns={"Model_Name": "Name", "ID": "Spec_ID"}, inplac
 df_table_products = set_index(df_table_products)
 
 
-# my DataFrames: df, df_products
+# my DataFrames: df, df_products, df_dollar_price
 
 # my Database DataFrames:
 # df_table_manufacturers, df_table_categories, df_table_CPUs,
@@ -615,5 +639,4 @@ df_table_specs.to_sql(name="Specs", con=engine, if_exists="append", index=False)
 df_table_products.to_sql(name="Products", con=engine, if_exists="append", index=False)
 df_table_prices.to_sql(name="Prices", con=engine, if_exists="append", index=False)
 
-df_table_orders['Date'] = df_table_orders['Date'].apply(lambda x: datetime.strptime(x, "%Y-%m-%d").togregorian())
 df_table_orders.to_sql(name="Orders", con=engine, if_exists="append", index=False)
