@@ -1,17 +1,11 @@
-Table ProductFactTable {
+Table ProductDimension {
   Product_ID INT
-  Oredr_ID INT
-  Price_ID INT
   Name VARCHAR
   Manufacturer VARCHAR
   Category VARCHAR
   RAM INT
   Storage VARCHAR
   Weight FLOAT
-}
-
-Table ProductDimension {
-  Product_ID INT
   CPU_Manufacturer VARCHAR
   CPU_Model VARCHAR
   CPU_Freq FLOAT
@@ -24,16 +18,11 @@ Table ProductDimension {
   Screen_Type VARCHAR
 }
 
-Table OredrsDimension {
+Table OredrsFactTable {
   Oredr_ID INT
-  Oredr_Branch VARCHAR
-  Oredr_Date DATE 
+  Product_ID INT
   Oredr_Priority CHAR
   Ship_Duration INT
-}
-
-Table PriceDimension {
-  Price_ID INT
   Quantity INT
   Price INT
   Discount INT
@@ -42,6 +31,16 @@ Table PriceDimension {
   Dollar_Price INT
 }
 
-Ref: ProductFactTable.Product_ID - ProductDimension.Product_ID
-Ref: ProductFactTable.Oredr_ID < OredrsDimension.Oredr_ID
-Ref: ProductFactTable.Price_ID < PriceDimension.Price_ID
+Table DateDimension {
+  Oredr_ID INT
+  Oredr_Date DATE 
+}
+
+Table LocationDimension {
+  Oredr_ID INT
+  Oredr_Branch VARCHAR
+}
+
+Ref: ProductDimension.Product_ID < OredrsFactTable.Product_ID
+Ref: OredrsFactTable.Oredr_ID > DateDimension.Oredr_ID
+Ref: OredrsFactTable.Oredr_ID > LocationDimension.Oredr_ID
