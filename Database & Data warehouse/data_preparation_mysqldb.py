@@ -10,8 +10,8 @@ from jdatetime import datetime
 file_dir = "sales_data.csv"
 file_dir2 = "dollar_price.csv"
 # Enter the following values to connect to the database
-user = ""
-password = ""
+user = "root"
+password = "khb!1mes2@K-pAsS3#zorie$"
 host = "localhost"
 port = 3306
 database = "project2"
@@ -176,6 +176,7 @@ CREATE TABLE Orders (
     ID INT,
     Branch VARCHAR(31),
     Date DATE,
+    Date_Shamsi VARCHAR(50),
     Priority CHAR,
     Ship_Duration INT,
     Price_ID INT,
@@ -208,6 +209,7 @@ df["Weight"] = df["Weight"].replace(["kgs", "kg"], "", regex=True).astype(float)
 
 # ------------------------------------------------------------------
 # Dollar Price
+df["Date_Shamsi"] = df["Order_Date"].copy()
 df["Order_Date"] = df["Order_Date"].apply(lambda x: datetime.strptime(x, "%Y-%m-%d").togregorian())
 
 df_dollar_price = pd.read_csv(file_dir2, index_col=[0])
@@ -372,6 +374,7 @@ df_products = df.drop(
         "Profit",
         "Dollar_Price",
         "Ship_Duration",
+        "Date_Shamsi",
     ],
     axis=1,
 )
@@ -415,7 +418,7 @@ df_table_prices = merge_df(
     ],
     "ID",
     "Product_ID",
-    ["Order_ID", "Branch", "Order_Date", "Order_Priority", "Ship_Duration"],
+    ["Order_ID", "Branch", "Order_Date", "Order_Priority", "Ship_Duration", "Date_Shamsi"],
 )
 df_table_prices = df_table_prices.drop_duplicates().reset_index(drop=True)
 df_table_prices = df_table_prices[
@@ -500,6 +503,7 @@ df_table_orders.rename(
     },
     inplace=True,
 )
+df_table_orders = df_table_orders[["ID", "Branch", "Date", "Date_Shamsi", "Priority", "Ship_Duration", "Price_ID"]]
 
 
 # ------------------------------------------------------------------
@@ -638,5 +642,4 @@ df_table_OSs.to_sql(name="OSs", con=engine, if_exists="append", index=False)
 df_table_specs.to_sql(name="Specs", con=engine, if_exists="append", index=False)
 df_table_products.to_sql(name="Products", con=engine, if_exists="append", index=False)
 df_table_prices.to_sql(name="Prices", con=engine, if_exists="append", index=False)
-
 df_table_orders.to_sql(name="Orders", con=engine, if_exists="append", index=False)
