@@ -33,12 +33,22 @@ Table OredrsFactTable {
 
 Table DateDimension {
   Oredr_ID INT
-  Oredr_Date DATE 
+  Date DATE
+  Date_Shamsi DATE
+  Year INT
+  Month INT
+  Day INT
+  Year_Shamsi INT
+  Month_Shamsi INT
+  Day_Shamsi INT
+
 }
 
 Table LocationDimension {
   Oredr_ID INT
   Oredr_Branch VARCHAR
+  Latitude FLOAT
+  Longitude FLOAT
 }
 
 Ref: ProductDimension.Product_ID < OredrsFactTable.Product_ID
