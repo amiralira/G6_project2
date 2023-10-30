@@ -11,7 +11,7 @@ file_dir = "sales_data.csv"
 file_dir2 = "dollar_price.csv"
 # Enter the following values to connect to the database
 user = "root"
-password = "khb!1mes2@K-pAsS3#zorie$"
+password = "root"
 host = "localhost"
 port = 3306
 database = "project2"
@@ -46,12 +46,12 @@ my_db = mysql.connector.connect(
     password=password,
 )
 my_cursor = my_db.cursor()
-my_cursor.execute("CREATE DATABASE " + database)
+my_cursor.execute("CREATE DATABASE IF NOT EXISTS " + database)
 my_db.commit()
 my_db, my_cursor = disconnect_database(my_db, my_cursor)
 
 create_manufacturers_table_query = """
-CREATE TABLE Manufacturers (
+CREATE TABLE IF NOT EXISTS Manufacturers (
     ID INT,
     Name VARCHAR(15),
     CONSTRAINT PK_Manufacturers PRIMARY KEY (ID)
@@ -59,7 +59,7 @@ CREATE TABLE Manufacturers (
 """
 
 create_categories_table_query = """
-CREATE TABLE Categories (
+CREATE TABLE IF NOT EXISTS Categories (
     ID INT,
     Name VARCHAR(31),
     CONSTRAINT PK_CPUs PRIMARY KEY (ID)
@@ -67,7 +67,7 @@ CREATE TABLE Categories (
 """
 
 create_CPUs_table_query = """
-CREATE TABLE CPUs (
+CREATE TABLE IF NOT EXISTSCPUs (
     ID INT,
     Model VARCHAR(31),
     Frequency FLOAT,
@@ -78,7 +78,7 @@ CREATE TABLE CPUs (
 """
 
 create_GPUs_table_query = """
-CREATE TABLE GPUs (
+CREATE TABLE IF NOT EXISTS GPUs (
     ID INT,
     Model VARCHAR(31),
     Manufacturer_ID INT,
@@ -88,7 +88,7 @@ CREATE TABLE GPUs (
 """
 
 create_storages_table_query = """ 
-CREATE TABLE Storages (
+CREATE TABLE IF NOT EXISTS Storages (
     ID INT,
     Model VARCHAR(30),
     CONSTRAINT PK_Storages PRIMARY KEY (ID)
@@ -96,7 +96,7 @@ CREATE TABLE Storages (
 """
 
 create_RAMs_table_query = """
-CREATE TABLE RAMs (
+CREATE TABLE IF NOT EXISTS RAMs (
     ID INT,
     Size INT,
     CONSTRAINT PK_RAMs PRIMARY KEY (ID)
@@ -104,7 +104,7 @@ CREATE TABLE RAMs (
 """
 
 create_screens_table_query = """
-CREATE TABLE Screens (
+CREATE TABLE IF NOT EXISTS Screens (
     ID INT,
     Size FLOAT,
     Resolution VARCHAR(15),
@@ -114,7 +114,7 @@ CREATE TABLE Screens (
 """
 
 create_OSs_table_query = """
-CREATE TABLE OSs (
+CREATE TABLE IF NOT EXISTS OSs (
     ID INT,
     Name VARCHAR(15),
     Version VARCHAR(7),
@@ -123,7 +123,7 @@ CREATE TABLE OSs (
 """
 
 create_specs_table_query = """
-CREATE TABLE Specs (
+CREATE TABLE IF NOT EXISTS Specs (
     ID INT,
     Weight FLOAT,
     CPU_ID INT,
@@ -143,7 +143,7 @@ CREATE TABLE Specs (
 """
 
 create_products_table_query = """
-CREATE TABLE Products (
+CREATE TABLE IF NOT EXISTS Products (
     ID INT,
     Name VARCHAR(50),
     Manufacturer_ID INT,
@@ -157,7 +157,7 @@ CREATE TABLE Products (
 """
 
 create_prices_table_query = """
-CREATE TABLE Prices (
+CREATE TABLE IF NOT EXISTS Prices (
     ID INT,
     Quantity INT,
     Price INT,
@@ -172,7 +172,7 @@ CREATE TABLE Prices (
 """
 
 create_orders_table_query = """
-CREATE TABLE Orders (
+CREATE TABLE IF NOT EXISTS Orders (
     ID INT,
     Branch VARCHAR(31),
     Date DATE,
