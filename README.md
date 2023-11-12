@@ -93,17 +93,22 @@ To answer this request, it is essential to consider that the most critical facto
 ### Monthly, Seasonal, and Annual Sales
 Total sales are examined for the current month, season, and year, both in dollars and Iranian rials.
 
-![Monthly, Seasonal, and Annual Sales](link_to_image)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-1-1.png)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-1-2-1.png)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-1-2-2.png)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-1-3.png)
 
 ### Monthly, Seasonal, and Annual Profits
 Total profits are analyzed for the current month, season, and year, both in dollars and Iranian rials.
 
-![Monthly, Seasonal, and Annual Profits](link_to_image)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-2-1.png)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-2-2.png)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-2-3.png)
 
 ### Total Sales and Profits Across Different Cities
 Sales and profits are evaluated across various cities, presented in both dollars and Iranian rials.
 
-![Total Sales and Profits Across Cities](link_to_image)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-3.png)
 
 ### Sales and Profit Trends Over Time in Specific Cities
 A dynamic menu allows managers to select specific cities, years, months, and days to observe the changing trends in sales and profits.
