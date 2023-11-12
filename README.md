@@ -31,14 +31,12 @@ Following the design and storage of data in the database, the next step is to de
 ## Competitor Analysis
 The project involves extracting data from competitors' websites to identify and complete missing products. Additionally, pricing strategies and current company policies are analyzed for potential adjustments.
 
-Competitor information is available at 
-<a href="https://drive.google.com/file/d/1k8ipAY1gLrC8c4F18uTgFvdbwYgWrMHS/view?usp=drive_link" target="_blank">Hello world!</a>
-[link1](https://drive.google.com/file/d/1k8ipAY1gLrC8c4F18uTgFvdbwYgWrMHS/view?usp=drive_link), [link2](https://drive.google.com/file/d/1aE236RzcdJz4jPweipJyP4wfy5Mckhp9/view?usp=drive_link).
+Competitor information is available at [link1](https://drive.google.com/file/d/1k8ipAY1gLrC8c4F18uTgFvdbwYgWrMHS/view?usp=drive_link), [link2](https://drive.google.com/file/d/1aE236RzcdJz4jPweipJyP4wfy5Mckhp9/view?usp=drive_link).
 
 ## Dashboard Creation
 To meet the company's needs, a dashboard is created to display the current status of the company and address specific requests. Power BI is employed for dashboard creation.
 
-Download the Power BI output at [link](power_bi_link).
+Download the Power BI output at [link](https://drive.google.com/file/d/1XYj-5oTi0P42MDWHzWfQuU23G3m0W1dF/view?usp=drive_link).
 
 ### Request 1: Targeted Advertising
 To increase customer base, the company plans to allocate a budget for advertising. We recommend cities with higher sales relative to their population and better profitability for targeted advertising.
