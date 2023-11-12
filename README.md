@@ -1,17 +1,4 @@
-# G6_project2
-This Project has multiple phases starting with:
-1. Creating Database
-2. Analysis and Review of Competitors
-3. Creating Data Warehouses
-4. Analyzing Different Scenarios Statistically 
-5. Power-BI:
-   https://drive.google.com/file/d/1bkzuwRkYeRhpaBYqhPly4DQ6SHI8unGI/view?usp=drive_link
-6. Trello Link:
-   https://trello.com/b/gh2cF6AI/first-quera-project
-
-
-
-# Project Description
+# Laptop Market Analytics Dashboard
 
 ## Overview
 This project involves a dataset of sales and orders from a laptop importing company, containing information such as Order_ID, Branch, Order_Date, Order_Priority, Manufacturer, Model_Name, Category, Screen_Size, Screen, CPU, RAM, Storage, GPU, OS, OS_Version, Weight, Price, Quantity, Discount, Total_Price, Profit, and Ship_Duration. The dataset includes 1,017,081 recorded orders spanning from the year 1390 to 1402 (Solar Hijri calendar).
