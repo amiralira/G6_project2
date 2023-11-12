@@ -87,3 +87,32 @@ To answer this request, it is essential to consider that the most critical facto
 
 ![Key Factor in Purchases](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%208.png)
 
+
+## Detailed Dashboard Analysis
+
+### Monthly, Seasonal, and Annual Sales
+Total sales are examined for the current month, season, and year, both in dollars and Iranian rials.
+
+![Monthly, Seasonal, and Annual Sales](link_to_image)
+
+### Monthly, Seasonal, and Annual Profits
+Total profits are analyzed for the current month, season, and year, both in dollars and Iranian rials.
+
+![Monthly, Seasonal, and Annual Profits](link_to_image)
+
+### Total Sales and Profits Across Different Cities
+Sales and profits are evaluated across various cities, presented in both dollars and Iranian rials.
+
+![Total Sales and Profits Across Cities](link_to_image)
+
+### Sales and Profit Trends Over Time in Specific Cities
+A dynamic menu allows managers to select specific cities, years, months, and days to observe the changing trends in sales and profits.
+
+![Dynamic Menu for City and Time Selection](link_to_video)
+![Sales and Profit Trends in Specific Cities](link_to_image)
+
+### Sales and Profit Trends Over Time Based on Laptop Brands or Categories
+Another menu enables managers to choose specific laptop brands and categories to visualize changing trends.
+
+![Dynamic Menu for Brand and Category Selection](link_to_gif)
+![Sales and Profit Trends by Laptop Brand or Category](link_to_image)
