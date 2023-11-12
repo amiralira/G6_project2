@@ -62,3 +62,25 @@ The company seeks advice on allocating capital among different laptop brands and
 Considering the company's return to the market after a long period, it needs a solution for predicting laptop prices based on technical specifications. Machine learning techniques are applied to predict prices based on influential features.
 
 ![Price Prediction](link_to_image)
+
+### Request 6: Monthly Sales Analysis
+The company plans to import goods monthly and wants to know if there is a difference in sales across different months. If differences exist, the company seeks guidance on how to allocate its annual budget among these months.
+
+To address this request, a prediction is made that sales may perform well in months at the end of the year or the beginning of the following year (e.g., Esfand and Farvardin). The popularity of sales in each month is determined based on obtained outputs, aligning with predictions.
+
+![Monthly Sales Analysis](link_to_image)
+
+### Request 7: Importance of Priority Levels
+In the past, the company had a policy favoring certain priority levels, impacting various aspects such as shipping methods. However, this policy has proven challenging. The company requests an assessment of whether maintaining this policy is justified based on the average profitability under these conditions.
+
+From the obtained average profitability results, it is evident that high priority levels or short order durations have a minimal impact on profitability.
+
+![Priority Levels Impact](link_to_image)
+
+### Request 8: Key Factor in Customer Laptop Purchases
+Examine which laptop feature is the most crucial factor for customer purchases.
+
+To answer this request, it is essential to consider that the most critical factor during purchases is the price. Eliminating its influence allows us to identify other features that attract or repel customers. For instance, an increase in CPU frequency, screen resolution, or RAM size may attract more customers, while an increase in weight or screen size may deter them.
+
+![Key Factor in Purchases](link_to_image)
+
