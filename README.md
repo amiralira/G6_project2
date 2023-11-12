@@ -87,7 +87,7 @@ To answer this request, it is essential to consider that the most critical facto
 
 ![Key Factor in Purchases](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%208.png)
 
-## Request 9: Alerting System Based on KPI
+### Request 9: Alerting System Based on KPI
 
 In this section, an alerting system is implemented based on Key Performance Indicators (KPI) and predefined thresholds. It compares the average sales for past years or months with the current year or month. If the average falls below the threshold, an alert is triggered, indicating a warning state. Conversely, if it exceeds the threshold, it signifies a stable state.
 
@@ -96,8 +96,7 @@ The current status is undetermined for the current year as the sales data for th
 ![Alerting System Based on KPI](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%209.png)
 
 
-
-## Dashboard1 Analysis
+## Detailed Analysis in the First Dashboard
 
 ### Monthly, Seasonal, and Annual Sales
 Total sales are examined for the current month, season, and year, both in dollars and Iranian rials.
@@ -135,3 +134,40 @@ Another menu enables managers to choose specific laptop brands and categories to
 ![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-5-2.png)
 ![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-5-3.png)
 ![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-5-4.png)
+
+
+## Detailed Analysis in the Second Dashboard
+
+In this section, a menu is provided for the user to select specific cities and time intervals (month and year). Based on the user's selection, various outputs are updated accordingly.
+
+1. **Overview of Sales, Orders, and Averages:**
+   The total sales, order count, average profit of all orders, and the average sales and profit of all orders are displayed based on the user's selected criteria.
+   ![Dashboard2](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%202-1.png)
+
+2. **Popularity of Brands and Categories:**
+   The popularity of each brand and category is visualized to provide insights into customer preferences.
+   ![Dashboard2](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%202-2.png)
+
+3. **Popularity of CPU and GPU Models:**
+   The popularity of each CPU and GPU model is depicted to understand customer preferences in terms of hardware.
+   ![Dashboard2](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%202-3.png)
+
+4. **Order Priority and RAM Size Popularity:**
+   The priority of orders and the popularity of RAM sizes are illustrated to help identify trends in customer choices.
+   ![Dashboard2](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%202-4.png)
+
+5. **Sales and Order Count by Province:**
+   The sales and order count are presented for each province, offering a regional perspective.
+   ![Dashboard2](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%202-5.png)
+
+6. **Impact of Discounts on Sales Count:**
+   The effect of discounts on the number of sales is highlighted, providing insights into customer behavior.
+   ![Dashboard2](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%202-6.png)
+
+7. **Popularity of Screen Sizes:**
+   The popularity of different screen sizes is visualized to understand customer preferences.
+   ![Dashboard2](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%202-7.png)
+
+8. **Order Dispersion by Laptop Price:**
+   The dispersion of orders based on laptop prices is showcased, revealing the distribution of customer preferences.
+   ![Dashboard2](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%202-8.png)
