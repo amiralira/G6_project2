@@ -41,46 +41,49 @@ Download the Power BI output at [link](https://drive.google.com/file/d/1XYj-5oTi
 ### Request 1: Targeted Advertising
 To increase customer base, the company plans to allocate a budget for advertising. We recommend cities with higher sales relative to their population and better profitability for targeted advertising.
 
-![Advertising Recommendation](link_to_image)
+![Advertising Recommendation1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%201-1.png)
+![Advertising Recommendation2](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%201-2.png)
 
 ### Request 2: Impact of Discounts on Sales
 The company wants to assess if discounts affect sales and how. T-tests are used to determine the significance of these effects. Data is divided into two sections: with and without discounts, and the average sales in both sections are compared.
 
-![Discount Impact](link_to_image)
+![Discount Impact1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%202-1.png)
+![Discount Impact2](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%202-2.png)
 
 ### Request 3: Impact of Discounts on Profit
 Building on the previous request, the company is concerned about potential profit reductions due to discounts. The average profitability is used for dashboard representation, especially during high-cash-volume orders.
 
-![Profit Impact](link_to_image)
+![Profit Impact1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%203-1.png)
+![Profit Impact2](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%203-2.png)
 
 ### Request 4: Capital Allocation for New Laptops
 The company seeks advice on allocating capital among different laptop brands and categories. Profitability for each brand in specific categories is calculated, and 20% of the profit is considered for product import and inventory completion.
 
-![Capital Allocation](link_to_image)
+![Capital Allocation](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%204.png)
 
 ### Request 5: Price Prediction for New Laptops
 Considering the company's return to the market after a long period, it needs a solution for predicting laptop prices based on technical specifications. Machine learning techniques are applied to predict prices based on influential features.
 
-![Price Prediction](link_to_image)
+![Price Prediction](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%205.png)
 
 ### Request 6: Monthly Sales Analysis
 The company plans to import goods monthly and wants to know if there is a difference in sales across different months. If differences exist, the company seeks guidance on how to allocate its annual budget among these months.
 
 To address this request, a prediction is made that sales may perform well in months at the end of the year or the beginning of the following year (e.g., Esfand and Farvardin). The popularity of sales in each month is determined based on obtained outputs, aligning with predictions.
 
-![Monthly Sales Analysis](link_to_image)
+![Monthly Sales Analysis](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%206.png)
 
 ### Request 7: Importance of Priority Levels
 In the past, the company had a policy favoring certain priority levels, impacting various aspects such as shipping methods. However, this policy has proven challenging. The company requests an assessment of whether maintaining this policy is justified based on the average profitability under these conditions.
 
 From the obtained average profitability results, it is evident that high priority levels or short order durations have a minimal impact on profitability.
 
-![Priority Levels Impact](link_to_image)
+![Priority Levels Impact](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%207.png)
 
 ### Request 8: Key Factor in Customer Laptop Purchases
 Examine which laptop feature is the most crucial factor for customer purchases.
 
 To answer this request, it is essential to consider that the most critical factor during purchases is the price. Eliminating its influence allows us to identify other features that attract or repel customers. For instance, an increase in CPU frequency, screen resolution, or RAM size may attract more customers, while an increase in weight or screen size may deter them.
 
-![Key Factor in Purchases](link_to_image)
+![Key Factor in Purchases](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%208.png)
 
