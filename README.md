@@ -114,7 +114,7 @@ Sales and profits are evaluated across various cities, presented in both dollars
 A dynamic menu allows managers to select specific cities, years, months, and days to observe the changing trends in sales and profits.
 
 ![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-4-1.gif)
-![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-4-2.mp4)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-4-2.gif)
 ![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-4-3-1.mp4)
 ![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-4-3-2.mp4)
 
