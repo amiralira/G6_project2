@@ -87,8 +87,17 @@ To answer this request, it is essential to consider that the most critical facto
 
 ![Key Factor in Purchases](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%208.png)
 
+## Request 9: Alerting System Based on KPI
 
-## Detailed Dashboard Analysis
+In this section, an alerting system is implemented based on Key Performance Indicators (KPI) and predefined thresholds. It compares the average sales for past years or months with the current year or month. If the average falls below the threshold, an alert is triggered, indicating a warning state. Conversely, if it exceeds the threshold, it signifies a stable state.
+
+The current status is undetermined for the current year as the sales data for the current year is incomplete. However, for the current month, the system indicates a stable state.
+
+![Alerting System Based on KPI](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Request%209.png)
+
+
+
+## Dashboard1 Analysis
 
 ### Monthly, Seasonal, and Annual Sales
 Total sales are examined for the current month, season, and year, both in dollars and Iranian rials.
