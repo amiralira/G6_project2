@@ -121,5 +121,8 @@ A dynamic menu allows managers to select specific cities, years, months, and day
 ### Sales and Profit Trends Over Time Based on Laptop Brands or Categories
 Another menu enables managers to choose specific laptop brands and categories to visualize changing trends.
 
-![Dynamic Menu for Brand and Category Selection](link_to_gif)
-![Sales and Profit Trends by Laptop Brand or Category](link_to_image)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-5-1-1.png)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-5-1-2.png)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-5-2.png)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-5-3.png)
+![Dashboard1](https://github.com/amiralira/G6_project2/blob/main/Image%20Results/Dashboard%201-5-4.png)
